@@ -1,0 +1,6 @@
+{
+  "name": " ELIX | Lets do this together ",
+  "description": "A soulful companion that helps you find the silver lining in every situation through empathetic reframing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

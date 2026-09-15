@@ -1,0 +1,7 @@
+
+{
+  "appId": "com.elix.brighter.side",
+  "appName": "ELIX",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

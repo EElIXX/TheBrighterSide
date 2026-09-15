@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+}
+
+:root {
+  --color-bg: #fffbeb; /* Warm golden ivory canvas */
+  --color-accent: #f97316; /* Vibrant monarch orange */
+  --color-amber-gold: #f59e0b;
+  --glass-surface: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(249, 115, 22, 0.15);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: #0f172a;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Luminous, Vibrant Atmosphere with Golden Hour Radiance */
+.atmosphere {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: 
+    radial-gradient(circle at 50% 18%, rgba(251, 191, 36, 0.45) 0%, rgba(245, 158, 11, 0.25) 35%, transparent 70%),
+    radial-gradient(circle at 85% 35%, rgba(249, 115, 22, 0.35) 0%, rgba(234, 88, 12, 0.18) 40%, transparent 65%),
+    radial-gradient(circle at 15% 45%, rgba(14, 165, 233, 0.25) 0%, rgba(56, 189, 248, 0.12) 40%, transparent 60%),
+    radial-gradient(circle at 50% 88%, rgba(16, 185, 129, 0.28) 0%, rgba(132, 204, 22, 0.15) 45%, transparent 65%);
+  filter: blur(60px);
+  opacity: 0.95;
+}
+
+.glass {
+  background: var(--glass-surface);
+  backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-vibrant {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.75) 100%);
+  backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(249, 115, 22, 0.25);
+  box-shadow: 0 12px 36px -8px rgba(249, 115, 22, 0.18), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* 3D Monarch Butterfly Wing Flutter Keyframes */
+@keyframes monarchFlutterLeft {
+  0% {
+    transform: rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateY(-72deg) rotateZ(-6deg);
+  }
+}
+
+@keyframes monarchFlutterRight {
+  0% {
+    transform: rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateY(72deg) rotateZ(6deg);
+  }
+}
+
+@keyframes monarchRest {
+  0% {
+    transform: rotateY(-12deg);
+  }
+  50% {
+    transform: rotateY(-45deg);
+  }
+  100% {
+    transform: rotateY(-12deg);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(249, 115, 22, 0.25);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 0.45);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Advice & Message Styling */
+.elix-message {
+  line-height: 1.7;
+}
+.elix-message p {
+  margin-bottom: 0.85rem;
+}
+.elix-message p:last-child {
+  margin-bottom: 0;
+}
+.elix-message strong {
+  font-weight: 800;
+  color: #431407;
+}
+.elix-message ul {
+  list-style-type: none;
+  padding-left: 0.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+.elix-message li {
+  position: relative;
+  padding-left: 1.45rem;
+  margin-bottom: 0.5rem;
+}
+.elix-message li::before {
+  content: "✨";
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  font-size: 0.75rem;
+}
+
